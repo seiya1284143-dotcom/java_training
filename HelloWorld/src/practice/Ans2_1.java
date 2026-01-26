@@ -1,8 +1,0 @@
-package practice;
-class Ans2_1
-{
-  public static void main(String[] arg)
-  {
-    System.out.println("Hello World!");
-  }
-}
