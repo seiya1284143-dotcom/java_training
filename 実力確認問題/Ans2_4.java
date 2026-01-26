@@ -1,15 +1,21 @@
-class Ans2_4
-{
-  public static void main(String[] args)
-  {
+/**
+ *このクラスは変数xに代入した数値を3倍して表示し、その後変数xを半分にして表示させます。
+ *@author 開
+ *@since 1.0
+ */
 
-    int x = 7;
-    x *= 3;
+public class Ans2_4{
 
-    System.out.println("x=" + x);
+    public static void main(String[] args){
 
-    x /= 2;
-    System.out.println("x=" + x);
+        int x = 7;
+        x *= 3;
 
-  }
+            System.out.println("x=" + x);
+
+                x /= 2;
+
+                    System.out.println("x=" + x);
+
+    }
 }
