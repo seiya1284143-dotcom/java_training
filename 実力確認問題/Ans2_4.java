@@ -3,19 +3,23 @@
  *@author 開
  *@since 1.0
  */
+public class Ans2_4 {
 
-public class Ans2_4{
-
+    /**
+    * プログラムを実行するメインメソッド。
+    *
+    * @param args コマンドライン引数
+    */
     public static void main(String[] args){
 
         int x = 7;
         x *= 3;
 
-            System.out.println("x=" + x);
+        System.out.println("x=" + x);
 
-                x /= 2;
+        x /= 2;
 
-                    System.out.println("x=" + x);
+        System.out.println("x=" + x);
 
     }
 }

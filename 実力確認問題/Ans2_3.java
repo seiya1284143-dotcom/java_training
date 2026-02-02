@@ -3,15 +3,13 @@
  *@author 開
  *@since 1.0
  */
-
-public class Ans2_3{
+public class Ans2_3 {
 
     /**
     * プログラムを実行するメインメソッド。
     *
     * @param args コマンドライン引数
     */
-
     public static void main(String[] args){
 
         int x = 3;
@@ -22,8 +20,8 @@ public class Ans2_3{
         x = y;
         y = z;
 
-            System.out.println("x=" + x);
-            System.out.println("y=" + y);
+        System.out.println("x=" + x);
+        System.out.println("y=" + y);
 
     }
 }
