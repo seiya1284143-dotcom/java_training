@@ -18,20 +18,20 @@ public class ans3_1_1 {
 
         System.out.println("試験の点数を入力してください。");
 
-    	BufferedReader br =
-	    new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br =
+            new BufferedReader(new InputStreamReader(System.in));
 
-	String str = br.readLine();
-	int x = Integer.parseInt(str);
+        String str = br.readLine();
+        int x = Integer.parseInt(str);
 
-	if (x >= 60 && x <= 100) {
-	    System.out.println("合格");
-	}
-	else if (x < 60 && x >= 0) {
-	    System.out.println("不合格");
-	}
-	else {
-	    System.out.println("正しい点数を入力してください。");
-	}
+        if (x >= 60 && x <= 100) {
+            System.out.println("合格");
+        }
+        else if (x < 60 && x >= 0) {
+            System.out.println("不合格");
+        }
+        else {
+            System.out.println("正しい点数を入力してください。");
+        }
     }
 }

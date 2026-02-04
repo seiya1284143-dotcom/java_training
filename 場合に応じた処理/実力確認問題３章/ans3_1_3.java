@@ -18,26 +18,26 @@ public class ans3_1_3 {
 
         System.out.println("試験の点数を入力してください。");
 
-    	BufferedReader br =
-	    new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br =
+            new BufferedReader(new InputStreamReader(System.in));
 
-	String str = br.readLine();
-	int x = Integer.parseInt(str);
+        String str = br.readLine();
+        int x = Integer.parseInt(str);
 
-	if (x >= 80 && x <= 100) {
-	    System.out.println("優");
-	}
-	else if (x >= 70 && x < 80) {
-	    System.out.println("良");
-	}
-	else if (x >= 60 && x < 70) {
-	    System.out.println("可");
-	}
-	else if (x >= 0 && x < 60) {
-	    System.out.println("不可");
-	}
-	else {
-	    System.out.println("正しい点数を入力してください。");
-	}
+        if (x >= 80 && x <= 100) {
+            System.out.println("優");
+        }
+        else if (x >= 70 && x < 80) {
+            System.out.println("良");
+        }
+        else if (x >= 60 && x < 70) {
+            System.out.println("可");
+        }
+        else if (x >= 0 && x < 60) {
+            System.out.println("不可");
+        }
+        else {
+            System.out.println("正しい点数を入力してください。");
+        }
     }
 }
