@@ -26,14 +26,11 @@ public class ans3_1_2 {
 
         if (x >= 80 && x <= 100) {
             System.out.println("たいへんよくできました。");
-        }
-        else if (x >= 60 && x < 80) {
+        } else if (x >= 60 && x < 80) {
             System.out.println("よくできました。");
-        }
-        else if (x < 60 && x >= 0) {
+        } else if (x < 60 && x >= 0) {
             System.out.println("ざんねんでした。");
-        }
-        else {
+        } else {
             System.out.println("正しい点数を入力してください。");
         }
     }

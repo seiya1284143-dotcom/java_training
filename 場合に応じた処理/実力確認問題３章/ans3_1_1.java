@@ -26,11 +26,9 @@ public class ans3_1_1 {
 
         if (x >= 60 && x <= 100) {
             System.out.println("合格");
-        }
-        else if (x < 60 && x >= 0) {
+        } else if (x < 60 && x >= 0) {
             System.out.println("不合格");
-        }
-        else {
+        } else {
             System.out.println("正しい点数を入力してください。");
         }
     }
