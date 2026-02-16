@@ -30,7 +30,7 @@ public class ans3_2 {
             System.out.println(x + "は" + y + "より小さく、かつ、" + x + "と" + y + "は共に偶数である。");
         } else if (x == y && x < 0 && y < 0) {
             System.out.println(x + "と" + y + "は等しく、かつ、負の数である。");
-        } else if (x <= y || (x % 2) == 0) {
+        } else if (x < y || (x % 2) == 0) {
             System.out.println(x + "は" + y + "より小さい、または、" + x + "は偶数である。");
         }
     }
