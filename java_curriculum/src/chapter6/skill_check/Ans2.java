@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *このクラスは商品と単価、支払金額を3回入力し、支払金額の不足有無を出力します。最後に不足の合計を出力します。
@@ -19,32 +21,33 @@ public class Ans2 {
         BufferedReader br =
             new BufferedReader(new InputStreamReader(System.in));
 
-        String[] name = new String[3];
-        int[][] x = new int[2][3];
+        List<String> name = new ArrayList<>();
+        List<Integer> tan = new ArrayList<>();
+        List<Integer> pay = new ArrayList<>();
 
-        for (int i = 0; i < name.length; i++) {
+        for (int i = 0; i < 3; i++) {
             System.out.println("商品を入力してください。");
-            name[i] = br.readLine();
+            name.add(br.readLine());
 
             System.out.println("単価を入力してください。");
             String str = br.readLine();
-            x[0][i] = Integer.parseInt(str);
+            int x = Integer.parseInt(str);
+            tan.add(x);
 
             System.out.println("支払金額を入力してください。");
             str = br.readLine();
-            x[1][i] = Integer.parseInt(str);
+            x = Integer.parseInt(str);
+            pay.add(x);
         }
 
-        int y = 0;
         int sum = 0;
 
-        for (int i = 0; i < name.length; i++) {
-            if (x[0][i] > x[1][i]) {
-                System.out.println(name[i] + "、" + x[0][i] + "円、支払金額不足");
-                y = (x[0][i] - x[1][i]);
-                sum += y;
+        for (int i = 0; i < name.size(); i++) {
+            if (tan.get(i) > pay.get(i)) {
+                System.out.println(name.get(i) + "、" + tan.get(i) + "円、支払金額不足");
+                sum += tan.get(i) - pay.get(i);
             } else {
-                System.out.println(name[i] + "、" + x[0][i] + "円、支払金額過不足無し");
+                System.out.println(name.get(i) + "、" + tan.get(i) + "円、支払金額過不足無し");
             }
         }
 

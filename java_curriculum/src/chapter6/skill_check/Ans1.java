@@ -1,3 +1,9 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *このクラスは保険契約者の情報を出力します。
  *@author 開
@@ -12,32 +18,32 @@ public class Ans1 {
      */
     public static void main(String[] args)  {
 
-        String[] name = new String[4];
+        List<String> name = new ArrayList<>();
+        name.add("中村");
+        name.add("田島");
+        name.add("小澤");
+        name.add("大西");
 
-        name[0] = "中村";
-        name[1] = "田島";
-        name[2] = "小澤";
-        name[3] = "大西";
+        List<Integer> hkn = new ArrayList<>();
+        hkn.add(5000);
+        hkn.add(3000);
+        hkn.add(4500);
+        hkn.add(6000);
 
-        int[][] num = new int[2][4];
+        List<Integer> tien = new ArrayList<>();
+        tien.add(2000);
+        tien.add(0);
+        tien.add(0);
+        tien.add(3500);
 
-        num[0][0] = 5000;
-        num[0][1] = 3000;
-        num[0][2] = 4500;
-        num[0][3] = 6000;
-        num[1][0] = 2000;
-        num[1][1] = 0;
-        num[1][2] = 0;
-        num[1][3] = 3500;
-
-        for (int i = 0; i < name.length; i++) {
-            System.out.println("契約者名:" + name[i] + "、保険料:" + num[0][i] + "円");
+        for (int i = 0; i < name.size(); i++) {
+            System.out.println("契約者名:" + name.get(i) + "、保険料:" + hkn.get(i) + "円");
         }
 
         int x = 0;
 
-        for (int i = 0; i < name.length; i++) {
-            if (num[1][i] > 0) {
+        for (int i = 0; i < tien.size(); i++) {
+            if (tien.get(i) > 0) {
                 x++;
             }
         }
