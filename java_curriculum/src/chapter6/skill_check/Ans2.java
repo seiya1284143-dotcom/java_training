@@ -21,33 +21,33 @@ public class Ans2 {
         BufferedReader br =
             new BufferedReader(new InputStreamReader(System.in));
 
-        List<String> name = new ArrayList<>();
-        List<Integer> tan = new ArrayList<>();
-        List<Integer> pay = new ArrayList<>();
+        List<String> names = new ArrayList<>();
+        List<Integer> unitPrices = new ArrayList<>();
+        List<Integer> paymentAmounts = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
             System.out.println("商品を入力してください。");
-            name.add(br.readLine());
+            names.add(br.readLine());
 
             System.out.println("単価を入力してください。");
             String str = br.readLine();
             int x = Integer.parseInt(str);
-            tan.add(x);
+            unitPrices.add(x);
 
             System.out.println("支払金額を入力してください。");
             str = br.readLine();
             x = Integer.parseInt(str);
-            pay.add(x);
+            paymentAmounts.add(x);
         }
 
         int sum = 0;
 
-        for (int i = 0; i < name.size(); i++) {
-            if (tan.get(i) > pay.get(i)) {
-                System.out.println(name.get(i) + "、" + tan.get(i) + "円、支払金額不足");
-                sum += tan.get(i) - pay.get(i);
+        for (int i = 0; i < names.size(); i++) {
+            if (unitPrices.get(i) > paymentAmounts.get(i)) {
+                System.out.println(names.get(i) + "、" + unitPrices.get(i) + "円、支払金額不足");
+                sum += unitPrices.get(i) - paymentAmounts.get(i);
             } else {
-                System.out.println(name.get(i) + "、" + tan.get(i) + "円、支払金額過不足無し");
+                System.out.println(names.get(i) + "、" + unitPrices.get(i) + "円、支払金額過不足無し");
             }
         }
 

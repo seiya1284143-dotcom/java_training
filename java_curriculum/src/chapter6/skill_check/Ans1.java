@@ -3,6 +3,7 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  *このクラスは保険契約者の情報を出力します。
@@ -18,37 +19,29 @@ public class Ans1 {
      */
     public static void main(String[] args)  {
 
-        List<String> name = new ArrayList<>();
-        name.add("中村");
-        name.add("田島");
-        name.add("小澤");
-        name.add("大西");
+        List<String> names = new ArrayList<>();
+        names.add("中村");
+        names.add("田島");
+        names.add("小澤");
+        names.add("大西");
 
-        List<Integer> hkn = new ArrayList<>();
-        hkn.add(5000);
-        hkn.add(3000);
-        hkn.add(4500);
-        hkn.add(6000);
+        List<Integer> premiums = new ArrayList<>();
+        premiums.add(5000);
+        premiums.add(3000);
+        premiums.add(4500);
+        premiums.add(6000);
 
-        List<Integer> tien = new ArrayList<>();
-        tien.add(2000);
-        tien.add(0);
-        tien.add(0);
-        tien.add(3500);
+        List<Integer> latePaymentInterests = new ArrayList<>();
+        latePaymentInterests.add(2000);
+        latePaymentInterests.add(0);
+        latePaymentInterests.add(0);
+        latePaymentInterests.add(3500);
 
-        for (int i = 0; i < name.size(); i++) {
-            System.out.println("契約者名:" + name.get(i) + "、保険料:" + hkn.get(i) + "円");
-        }
+        IntStream.range(0, names.size()).forEach(i -> {
+            System.out.println("契約者名:" + names.get(i) + "、保険料:" + premiums.get(i) + "円");
+        });
 
-        int x = 0;
-
-        for (int i = 0; i < tien.size(); i++) {
-            if (tien.get(i) > 0) {
-                x++;
-            }
-        }
-
-        System.out.println("遅延利息金が発生している人数は" + x + "人です。");
-
+        long count = latePaymentInterests.stream().filter(x -> x > 0).count();
+        System.out.println("遅延利息金が発生している人数は" + count + "人です。");
     }
 }
